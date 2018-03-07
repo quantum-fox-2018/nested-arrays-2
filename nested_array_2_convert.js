@@ -10,7 +10,7 @@ let roster = [
 ]
 
 // [[roster[0][0], roster[1][0]], [roster[0][1], roster[1][1]],...
-var newRoaster=[]
+var newarrRoaster=[]
 function convert_roster_format (nestedArray) {
   for (var i = 0; i < nestedArray.length; i++) {
     //console.log(nestedArray[i]);
@@ -20,11 +20,11 @@ function convert_roster_format (nestedArray) {
       objRoaster.Name=nestedArray[i][1]
       objRoaster.Position=nestedArray[i][2]
       objRoaster['Point perGame']=nestedArray[i][3]
-      newRoaster.push(objRoaster)
+      newarrRoaster.push(objRoaster)
     }
 
   }
-return newRoaster
+return newarrRoaster
 }
 
 
