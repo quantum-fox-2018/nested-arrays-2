@@ -13,6 +13,22 @@ let roster = [
 
 function convert_roster_format (nestedArray) {
   // your convert code here
+  let object_roster = []
+
+  for (let i = 1; i < nestedArray.length; i++) {
+    let obj = {
+      [roster[0][0]] : nestedArray[i][0],
+      [roster[0][1]] : nestedArray[i][1],
+      [roster[0][2]] : nestedArray[i][2],
+      [roster[0][3]] : nestedArray[i][3]
+      }
+
+    object_roster.push(obj)
+
+  }
+
+  return object_roster;
+
 }
 
 let object_roster = convert_roster_format(roster)
