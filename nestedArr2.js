@@ -11,11 +11,9 @@ var roaster = [
     var result = [];
     for(var i =1; i < roaster.length; i++){
       var obj = {};
-      for(var j =0; j < roaster[i].length; j++){
         for(var k =0; k < roaster[0].length; k++){
           obj[roaster[0][k]] = roaster [i][k]; 
-        }
-      }
+        }      
       result.push(obj);
     }
     return result;
