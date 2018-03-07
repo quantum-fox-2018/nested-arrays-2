@@ -10,11 +10,11 @@ var roaster = [
   function convert_roaster_format(roaster){
     var result = [];
     for(var i =1; i < roaster.length; i++){
-      var obj = {};
+        var obj = {};
         for(var k =0; k < roaster[0].length; k++){
-          obj[roaster[0][k]] = roaster [i][k]; 
+            obj[roaster[0][k]] = roaster [i][k]; 
         }      
-      result.push(obj);
+        result.push(obj);
     }
     return result;
   }
