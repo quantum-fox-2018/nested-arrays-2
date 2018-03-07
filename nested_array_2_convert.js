@@ -12,7 +12,20 @@ let roster = [
 // [[roster[0][0], roster[1][0]], [roster[0][1], roster[1][1]],...
 
 function convert_roster_format (nestedArray) {
-  // your convert code here
+
+  for(let i = 1; i < roster.length; i++){
+      let objRoster = {};
+      objRoster[roster[0][0]] = roster[i][0];
+      objRoster[roster[0][1]] = roster[i][1];
+      objRoster[roster[0][2]] = roster[i][2];
+      objRoster[roster[0][3]] = roster[i][3];
+      //roster.splice(i,1, objRoster);
+      roster[i] = objRoster;
+  }
+  //menghapus index pertama / 0 dari roster
+  roster.shift();
+
+  return roster;
 }
 
 let object_roster = convert_roster_format(roster)
