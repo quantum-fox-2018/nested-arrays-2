@@ -17,10 +17,9 @@ function convert_roster_format (nestedArray) {
   var objArr = [];
   for (var i = 1; i < roster.length; i++) {
     var tempObj = {};
-    tempObj[roster[0][0]] = roster[i][0];
-    tempObj[roster[0][1]] = roster[i][1];
-    tempObj[roster[0][2]] = roster[i][2];
-    tempObj[roster[0][3]] = roster[i][3];
+    for (var j = 0; j < roster[0].length; j++) {
+      tempObj[roster[0][j]] = roster[i][j];
+    }
     objArr.push(tempObj)
   }
   return objArr;
