@@ -13,6 +13,19 @@ let roster = [
 
 function convert_roster_format (nestedArray) {
   // your convert code here
+
+  for(let i=1;i<roster.length;i++){
+
+    let objDatabase = {};
+    objDatabase["Number"] = roster[i][0];
+    objDatabase["Name"] = roster[i][1];
+    objDatabase["Position"] = roster[i][2];
+    objDatabase["PointsPerGame"] = roster[i][3];
+
+    roster[i-1] = objDatabase
+
+  }
+  return roster;
 }
 
 let object_roster = convert_roster_format(roster)
